@@ -13,4 +13,4 @@ ICMP_TIME_WINDOW = 10          # secondes
 ICMP_THRESHOLD = 5             # nombre de paquets ICMP avant alerte
 
 # --- Ports interdits ---
-FORBIDDEN_PORTS = [22, 23, 3389]  # SSH, Telnet, RDP 
+FORBIDDEN_PORTS = [22, 23, 3389]  # SSH, Telnet, RDP par exemple
