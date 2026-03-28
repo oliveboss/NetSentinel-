@@ -53,6 +53,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Download coverage artifact
         uses: actions/download-artifact@v4
@@ -61,7 +63,7 @@ jobs:
           path: .
 
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
+        uses: SonarSource/sonarcloud-github-action@masterv5.0.0
         with:
           args: >
             -Dsonar.qualitygate.wait=true
