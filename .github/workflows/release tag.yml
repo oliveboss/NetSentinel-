@@ -11,6 +11,7 @@ on:
       - 'v*'
 
 jobs:
+
   build-windows:
     name: Build Windows exe
     runs-on: windows-latest
@@ -129,11 +130,17 @@ jobs:
           name: NetSentinel-windows
           path: .
 
+      - name: Move Windows exe
+        run: mv NetSentinel-windows/NetSentinel.exe NetSentinel.exe
+
       - name: Download Linux artifact
         uses: actions/download-artifact@v4
         with:
           name: NetSentinel-linux
           path: .
+
+      - name: Move AppImage
+        run: mv NetSentinel-linux/NetSentinel-x86_64.AppImage NetSentinel-x86_64.AppImage
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
