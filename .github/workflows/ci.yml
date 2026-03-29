@@ -1,4 +1,4 @@
-name: CI Build NetSentinel
+name: CI Build 
 
 on:
   workflow_dispatch:
