@@ -28,9 +28,7 @@ def process_packet(packet):
         "flags": flags if TCP in packet else ""
     }
 
-    # DEBUG: Afficher les paquets TCP avec flags
-    if TCP in packet and flags:
-        print(f"DEBUG SNIFFER: TCP {pkt['src']}:{pkt['sport']} -> {pkt['dst']}:{pkt['dport']} flags='{flags}'")
+  
 
     state.packet_callback(pkt)
 
