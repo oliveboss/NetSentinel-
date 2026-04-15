@@ -150,7 +150,7 @@ Paquets réseau → Sniffer → Rules Engine → Détections → UI → Alertes
 
 1. **Cloner le projet**
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/oliveboss/NetSentinel.git
    cd Projet\ en\ info\ netsentinel
    ```
 
